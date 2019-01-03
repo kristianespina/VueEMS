@@ -1,0 +1,29 @@
+{
+  "name": "VueEMS",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test",
+    "db_dev": "nodemon --exec babel-node src/mongodb/index.js",
+    "db_build": "NODE_ENV=PRODUCTION babel src/mongodb -d dist/mongodb --copy-files",
+    "db_serve": "NODE_ENV=production node dist/mongodb/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.3",
+    "graphql-yoga": "^1.16.9",
+    "jsonwebtoken": "^8.4.0",
+    "lodash": "^4.17.11",
+    "mongoose": "^5.4.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "nodemon": "^1.18.9"
+  }
+}
